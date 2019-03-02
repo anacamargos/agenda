@@ -14,6 +14,8 @@
 		BFAFA583222AE80E00BBDDBA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAFA581222AE80E00BBDDBA /* LaunchScreen.storyboard */; };
 		BFAFA58E222AE80E00BBDDBA /* AgendaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA58D222AE80E00BBDDBA /* AgendaTests.swift */; };
 		BFAFA599222AE80E00BBDDBA /* AgendaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA598222AE80E00BBDDBA /* AgendaUITests.swift */; };
+		BFAFA5AB222B108B00BBDDBA /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA5AA222B108B00BBDDBA /* HomeTableViewController.swift */; };
+		BFAFA5AD222B109C00BBDDBA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA5AC222B109C00BBDDBA /* HomeTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		BFAFA594222AE80E00BBDDBA /* AgendaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AgendaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAFA598222AE80E00BBDDBA /* AgendaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgendaUITests.swift; sourceTree = "<group>"; };
 		BFAFA59A222AE80E00BBDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFAFA5AA222B108B00BBDDBA /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		BFAFA5AC222B109C00BBDDBA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 		BFAFA577222AE80D00BBDDBA /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				BFAFA5A6222B104A00BBDDBA /* Home */,
+				BFAFA5A7222B105300BBDDBA /* Alunos */,
 				BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */,
 				BFAFA57A222AE80D00BBDDBA /* ViewController.swift */,
 				BFAFA57C222AE80D00BBDDBA /* Main.storyboard */,
@@ -123,6 +129,38 @@
 				BFAFA59A222AE80E00BBDDBA /* Info.plist */,
 			);
 			path = AgendaUITests;
+			sourceTree = "<group>";
+		};
+		BFAFA5A6222B104A00BBDDBA /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BFAFA5A9222B106A00BBDDBA /* Controller */,
+				BFAFA5A8222B106400BBDDBA /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BFAFA5A7222B105300BBDDBA /* Alunos */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Alunos;
+			sourceTree = "<group>";
+		};
+		BFAFA5A8222B106400BBDDBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFAFA5AC222B109C00BBDDBA /* HomeTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFAFA5A9222B106A00BBDDBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFAFA5AA222B108B00BBDDBA /* HomeTableViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +294,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAFA5AB222B108B00BBDDBA /* HomeTableViewController.swift in Sources */,
 				BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */,
+				BFAFA5AD222B109C00BBDDBA /* HomeTableViewCell.swift in Sources */,
 				BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
