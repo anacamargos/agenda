@@ -16,6 +16,7 @@
 		BFAFA599222AE80E00BBDDBA /* AgendaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA598222AE80E00BBDDBA /* AgendaUITests.swift */; };
 		BFAFA5AB222B108B00BBDDBA /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA5AA222B108B00BBDDBA /* HomeTableViewController.swift */; };
 		BFAFA5AD222B109C00BBDDBA /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA5AC222B109C00BBDDBA /* HomeTableViewCell.swift */; };
+		BFAFA5B1222B12EB00BBDDBA /* AlunoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA5B0222B12EB00BBDDBA /* AlunoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		BFAFA59A222AE80E00BBDDBA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFAFA5AA222B108B00BBDDBA /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
 		BFAFA5AC222B109C00BBDDBA /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		BFAFA5B0222B12EB00BBDDBA /* AlunoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlunoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +145,8 @@
 		BFAFA5A7222B105300BBDDBA /* Alunos */ = {
 			isa = PBXGroup;
 			children = (
+				BFAFA5AF222B12C900BBDDBA /* Controller */,
+				BFAFA5AE222B12C300BBDDBA /* View */,
 			);
 			path = Alunos;
 			sourceTree = "<group>";
@@ -159,6 +163,21 @@
 			isa = PBXGroup;
 			children = (
 				BFAFA5AA222B108B00BBDDBA /* HomeTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFAFA5AE222B12C300BBDDBA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				BFAFA5B0222B12EB00BBDDBA /* AlunoViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BFAFA5AF222B12C900BBDDBA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -294,6 +313,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFAFA5B1222B12EB00BBDDBA /* AlunoViewController.swift in Sources */,
 				BFAFA5AB222B108B00BBDDBA /* HomeTableViewController.swift in Sources */,
 				BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */,
 				BFAFA5AD222B109C00BBDDBA /* HomeTableViewCell.swift in Sources */,

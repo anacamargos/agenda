@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="76" id="dJS-s1-Sam" customClass="HomeTableViewCell" customModule="Agenda" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula-aluno" rowHeight="76" id="dJS-s1-Sam" customClass="HomeTableViewCell" customModule="Agenda" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="76"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dJS-s1-Sam" id="VhX-TR-6lj">
@@ -48,6 +48,10 @@
                                         <constraint firstItem="j7J-Xx-opa" firstAttribute="centerY" secondItem="VhX-TR-6lj" secondAttribute="centerY" id="aEv-nw-p2G"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imagemAluno" destination="DF3-Df-L9M" id="7dR-PD-dz4"/>
+                                    <outlet property="labelNome" destination="j7J-Xx-opa" id="epZ-4L-Lea"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -68,10 +72,10 @@
             </objects>
             <point key="canvasLocation" x="543.20000000000005" y="190.25487256371815"/>
         </scene>
-        <!--View Controller-->
+        <!--Aluno View Controller-->
         <scene sceneID="Y9o-Li-aaT">
             <objects>
-                <viewController id="QU1-a9-hbx" sceneMemberID="viewController">
+                <viewController id="QU1-a9-hbx" customClass="AlunoViewController" customModule="Agenda" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uzj-ho-E3a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +92,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWc-ll-Vh8">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                                 <state key="normal" title="foto"/>
+                                                <connections>
+                                                    <action selector="buttonFoto:" destination="QU1-a9-hbx" eventType="touchUpInside" id="l8C-cJ-WAT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -164,7 +171,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="S9f-qn-XAF">
                                                 <rect key="frame" x="0.0" y="312.5" width="343" height="30"/>
                                                 <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DE8-g2-Alp">
+                                                    <textField opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DE8-g2-Alp">
                                                         <rect key="frame" x="0.0" y="0.0" width="229" height="30"/>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -172,6 +179,9 @@
                                                     </textField>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="1yU-Fw-vtE">
                                                         <rect key="frame" x="249" y="0.0" width="94" height="29"/>
+                                                        <connections>
+                                                            <action selector="stepperNota:" destination="QU1-a9-hbx" eventType="valueChanged" id="oHf-4d-ZqO"/>
+                                                        </connections>
                                                     </stepper>
                                                 </subviews>
                                                 <constraints>
@@ -211,6 +221,17 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Hqz-Rw-wNC"/>
                     </view>
+                    <connections>
+                        <outlet property="buttonFoto" destination="hWc-ll-Vh8" id="TRu-H5-RKV"/>
+                        <outlet property="imagemAluno" destination="dQw-mD-jNO" id="28Y-Fb-HaN"/>
+                        <outlet property="scrollViewPrincipal" destination="6X3-lO-hhK" id="ZEf-98-LbV"/>
+                        <outlet property="textFieldEndereco" destination="qze-Vf-WGw" id="17M-sh-rtJ"/>
+                        <outlet property="textFieldNome" destination="CCb-Iv-rf5" id="cqQ-DC-Qt3"/>
+                        <outlet property="textFieldNota" destination="DE8-g2-Alp" id="FyV-xs-H4d"/>
+                        <outlet property="textFieldSite" destination="vcG-Nh-Fsu" id="cus-ux-h1q"/>
+                        <outlet property="textFieldTelefone" destination="Uts-zm-xy7" id="eNR-w1-HJo"/>
+                        <outlet property="viewImagemAluno" destination="dmz-2f-qJq" id="lrM-Kb-IEx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sZz-Gb-zcl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
