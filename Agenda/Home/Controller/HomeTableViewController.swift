@@ -16,6 +16,7 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFe
     let searchController = UISearchController(searchResultsController: nil)
     var gerenciadorDeResultados: NSFetchedResultsController<Aluno>?
     var alunoViewController: AlunoViewController?
+    var mensagem = Mensagem()
     
     var contexto: NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -63,10 +64,14 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFe
     
     @objc func abrirActionSheet(_ longPress: UILongPressGestureRecognizer) {
         if longPress.state == .began {
+            guard let alunoSelecionado = gerenciadorDeResultados?.fetchedObjects?[(longPress.view?.tag)!] else { return }
             let menu = MenuOpcoesAlunos().configuraMenuDeOpcoesDoAluno { (opcao) in
                 switch opcao {
                 case .sms:
-                    print("SMS")
+                    if let componenteMensagem = self.mensagem.configuraSMS(alunoSelecionado) {
+                        componenteMensagem.messageComposeDelegate = self.mensagem
+                        self.present(componenteMensagem, animated: true, completion: nil)
+                    }
                 }
             }
             self.present(menu, animated: true, completion: nil)
