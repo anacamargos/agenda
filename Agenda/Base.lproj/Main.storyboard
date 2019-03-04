@@ -86,12 +86,12 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dmz-2f-qJq">
                                         <rect key="frame" x="109" y="16" width="125" height="125"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dQw-mD-jNO">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dQw-mD-jNO">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
                                             </imageView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hWc-ll-Vh8">
                                                 <rect key="frame" x="0.0" y="0.0" width="125" height="125"/>
-                                                <state key="normal" title="foto"/>
+                                                <state key="normal" title="Foto"/>
                                                 <connections>
                                                     <action selector="buttonFoto:" destination="QU1-a9-hbx" eventType="touchUpInside" id="l8C-cJ-WAT"/>
                                                 </connections>
