@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BFA35C06222D6BB100304475 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C05222D6BB100304475 /* ImagePicker.swift */; };
 		BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */; };
 		BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA57A222AE80D00BBDDBA /* ViewController.swift */; };
 		BFAFA57E222AE80D00BBDDBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAFA57C222AE80D00BBDDBA /* Main.storyboard */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BFA35C05222D6BB100304475 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		BFAFA575222AE80D00BBDDBA /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAFA57A222AE80D00BBDDBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,6 +82,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BFA35C04222D6B9900304475 /* Componentes */ = {
+			isa = PBXGroup;
+			children = (
+				BFA35C05222D6BB100304475 /* ImagePicker.swift */,
+			);
+			path = Componentes;
+			sourceTree = "<group>";
+		};
 		BFAFA56C222AE80D00BBDDBA = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 		BFAFA577222AE80D00BBDDBA /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
+				BFA35C04222D6B9900304475 /* Componentes */,
 				BFAFA5A6222B104A00BBDDBA /* Home */,
 				BFAFA5A7222B105300BBDDBA /* Alunos */,
 				BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */,
@@ -316,6 +327,7 @@
 				BFAFA5B1222B12EB00BBDDBA /* AlunoViewController.swift in Sources */,
 				BFAFA5AB222B108B00BBDDBA /* HomeTableViewController.swift in Sources */,
 				BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */,
+				BFA35C06222D6BB100304475 /* ImagePicker.swift in Sources */,
 				BFAFA5AD222B109C00BBDDBA /* HomeTableViewCell.swift in Sources */,
 				BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */,
 			);
@@ -493,6 +505,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZR4HDJL2Y8;
 				INFOPLIST_FILE = Agenda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,6 +523,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = ZR4HDJL2Y8;
 				INFOPLIST_FILE = Agenda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
