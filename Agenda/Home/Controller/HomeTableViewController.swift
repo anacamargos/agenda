@@ -9,12 +9,13 @@
 import UIKit
 import CoreData
 
-class HomeTableViewController: UITableViewController , UISearchBarDelegate {
+class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFetchedResultsControllerDelegate {
     
     // MARK: - Variáveis
     
     let searchController = UISearchController(searchResultsController: nil)
     var gerenciadorDeResultados: NSFetchedResultsController<Aluno>?
+    var alunoViewController: AlunoViewController?
     
     var contexto: NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -32,6 +33,13 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate {
     
     // MARK: - Métodos
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editar" {
+            alunoViewController = segue.destination as? AlunoViewController
+            
+        }
+    }
+    
     func configuraSearch() {
         self.searchController.searchBar.delegate = self
         self.searchController.dimsBackgroundDuringPresentation = false
@@ -45,6 +53,7 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate {
         pesquisaAluno.sortDescriptors = [ordenaPorNome]
         
         gerenciadorDeResultados = NSFetchedResultsController(fetchRequest: pesquisaAluno, managedObjectContext: contexto, sectionNameKeyPath: nil, cacheName: nil)
+        gerenciadorDeResultados?.delegate = self
         do {
             try gerenciadorDeResultados?.performFetch()
         } catch {
@@ -64,9 +73,7 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula-aluno", for: indexPath) as! HomeTableViewCell
         guard let aluno = gerenciadorDeResultados?.fetchedObjects![indexPath.row] else { return cell }
-        
         cell.configuraCelula(aluno)
-                
         return cell
     }
     
@@ -82,6 +89,24 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate {
         } else if editingStyle == .insert {
             // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let alunoSelecionado = gerenciadorDeResultados?.fetchedObjects![indexPath.row] else { return }
+        alunoViewController?.aluno = alunoSelecionado
         
     }
+    
+    // MARK: - FetchedResultsControllerDelegate
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            // implementar
+            print("Oi")
+        default:
+            tableView.reloadData()
+        }
+    }
+    
 }

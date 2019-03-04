@@ -51,6 +51,7 @@
                                 <connections>
                                     <outlet property="imagemAluno" destination="DF3-Df-L9M" id="7dR-PD-dz4"/>
                                     <outlet property="labelNome" destination="j7J-Xx-opa" id="epZ-4L-Lea"/>
+                                    <segue destination="QU1-a9-hbx" kind="show" identifier="editar" id="FPl-Db-ryc"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -257,4 +258,7 @@
             <point key="canvasLocation" x="-409" y="191"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="FPl-Db-ryc"/>
+    </inferredMetricsTieBreakers>
 </document>
