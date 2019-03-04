@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		BFA35C06222D6BB100304475 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C05222D6BB100304475 /* ImagePicker.swift */; };
 		BFA35C2A222D78C700304475 /* Agenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C28222D78C700304475 /* Agenda.xcdatamodeld */; };
+		BFA35C2C222D8FD900304475 /* MenuOpcoesAlunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C2B222D8FD900304475 /* MenuOpcoesAlunos.swift */; };
 		BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */; };
 		BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA57A222AE80D00BBDDBA /* ViewController.swift */; };
 		BFAFA57E222AE80D00BBDDBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAFA57C222AE80D00BBDDBA /* Main.storyboard */; };
@@ -41,6 +42,7 @@
 /* Begin PBXFileReference section */
 		BFA35C05222D6BB100304475 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		BFA35C29222D78C700304475 /* Agenda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Agenda.xcdatamodel; sourceTree = "<group>"; };
+		BFA35C2B222D8FD900304475 /* MenuOpcoesAlunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOpcoesAlunos.swift; sourceTree = "<group>"; };
 		BFAFA575222AE80D00BBDDBA /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAFA57A222AE80D00BBDDBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				BFA35C05222D6BB100304475 /* ImagePicker.swift */,
+				BFA35C2B222D8FD900304475 /* MenuOpcoesAlunos.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFAFA5B1222B12EB00BBDDBA /* AlunoViewController.swift in Sources */,
+				BFA35C2C222D8FD900304475 /* MenuOpcoesAlunos.swift in Sources */,
 				BFAFA5AB222B108B00BBDDBA /* HomeTableViewController.swift in Sources */,
 				BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */,
 				BFA35C06222D6BB100304475 /* ImagePicker.swift in Sources */,
