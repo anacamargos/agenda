@@ -160,7 +160,6 @@
 			isa = PBXGroup;
 			children = (
 				BFAFA5AF222B12C900BBDDBA /* Controller */,
-				BFAFA5AE222B12C300BBDDBA /* View */,
 			);
 			path = Alunos;
 			sourceTree = "<group>";
@@ -181,17 +180,10 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		BFAFA5AE222B12C300BBDDBA /* View */ = {
-			isa = PBXGroup;
-			children = (
-				BFAFA5B0222B12EB00BBDDBA /* AlunoViewController.swift */,
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		BFAFA5AF222B12C900BBDDBA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				BFAFA5B0222B12EB00BBDDBA /* AlunoViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";

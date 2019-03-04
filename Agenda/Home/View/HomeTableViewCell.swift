@@ -23,5 +23,14 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
     }
+    
+    func configuraCelula(_ aluno: Aluno) {
+        self.labelNome.text = aluno.nome
+        self.imagemAluno.layer.cornerRadius = imagemAluno.frame.width / 2
+        self.imagemAluno.layer.masksToBounds = true
+        if let imagemDoAlumo = aluno.foto as? UIImage {
+            self.imagemAluno.image = imagemDoAlumo
+        }
+    }
 
 }

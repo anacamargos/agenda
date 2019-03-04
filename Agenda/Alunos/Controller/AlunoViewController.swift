@@ -28,6 +28,7 @@ class AlunoViewController: UIViewController, ImagePickerFotoSelecionada {
     // MARK: - Atributos
     
     let imagePicker = ImagePicker()
+    
     var contexto: NSManagedObjectContext {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.persistentContainer.viewContext

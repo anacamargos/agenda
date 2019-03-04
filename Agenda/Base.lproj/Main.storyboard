@@ -19,22 +19,22 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula-aluno" rowHeight="76" id="dJS-s1-Sam" customClass="HomeTableViewCell" customModule="Agenda" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="76"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celula-aluno" rowHeight="85" id="dJS-s1-Sam" customClass="HomeTableViewCell" customModule="Agenda" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="85"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dJS-s1-Sam" id="VhX-TR-6lj">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="75.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="84.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DF3-Df-L9M">
-                                            <rect key="frame" x="24" y="8" width="60" height="60"/>
+                                            <rect key="frame" x="24" y="16" width="60" height="60"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="60" id="qYf-QT-C54"/>
                                                 <constraint firstAttribute="width" constant="60" id="zoG-C0-z5i"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7J-Xx-opa">
-                                            <rect key="frame" x="116" y="27.5" width="219" height="20.5"/>
+                                            <rect key="frame" x="116" y="32" width="235" height="20.5"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -43,9 +43,9 @@
                                     <constraints>
                                         <constraint firstItem="DF3-Df-L9M" firstAttribute="leading" secondItem="VhX-TR-6lj" secondAttribute="leading" constant="24" id="BrE-kR-Aar"/>
                                         <constraint firstItem="j7J-Xx-opa" firstAttribute="leading" secondItem="DF3-Df-L9M" secondAttribute="trailing" constant="32" id="FUA-tA-5J1"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="j7J-Xx-opa" secondAttribute="trailing" constant="24" id="NJu-WM-Y1j"/>
-                                        <constraint firstItem="DF3-Df-L9M" firstAttribute="top" secondItem="VhX-TR-6lj" secondAttribute="top" constant="8" id="QpC-LQ-8qw"/>
+                                        <constraint firstItem="DF3-Df-L9M" firstAttribute="top" secondItem="VhX-TR-6lj" secondAttribute="top" constant="16" id="QpC-LQ-8qw"/>
                                         <constraint firstItem="j7J-Xx-opa" firstAttribute="centerY" secondItem="VhX-TR-6lj" secondAttribute="centerY" id="aEv-nw-p2G"/>
+                                        <constraint firstAttribute="trailing" secondItem="j7J-Xx-opa" secondAttribute="trailing" constant="24" id="qdN-p0-GIt"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
