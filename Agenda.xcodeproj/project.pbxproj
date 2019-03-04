@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BFA35C06222D6BB100304475 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C05222D6BB100304475 /* ImagePicker.swift */; };
+		BFA35C2A222D78C700304475 /* Agenda.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C28222D78C700304475 /* Agenda.xcdatamodeld */; };
 		BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */; };
 		BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA57A222AE80D00BBDDBA /* ViewController.swift */; };
 		BFAFA57E222AE80D00BBDDBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAFA57C222AE80D00BBDDBA /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 
 /* Begin PBXFileReference section */
 		BFA35C05222D6BB100304475 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		BFA35C29222D78C700304475 /* Agenda.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Agenda.xcdatamodel; sourceTree = "<group>"; };
 		BFAFA575222AE80D00BBDDBA /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAFA57A222AE80D00BBDDBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 				BFAFA5A6222B104A00BBDDBA /* Home */,
 				BFAFA5A7222B105300BBDDBA /* Alunos */,
 				BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */,
+				BFA35C28222D78C700304475 /* Agenda.xcdatamodeld */,
 				BFAFA57A222AE80D00BBDDBA /* ViewController.swift */,
 				BFAFA57C222AE80D00BBDDBA /* Main.storyboard */,
 				BFAFA57F222AE80E00BBDDBA /* Assets.xcassets */,
@@ -328,6 +331,7 @@
 				BFAFA5AB222B108B00BBDDBA /* HomeTableViewController.swift in Sources */,
 				BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */,
 				BFA35C06222D6BB100304475 /* ImagePicker.swift in Sources */,
+				BFA35C2A222D78C700304475 /* Agenda.xcdatamodeld in Sources */,
 				BFAFA5AD222B109C00BBDDBA /* HomeTableViewCell.swift in Sources */,
 				BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */,
 			);
@@ -654,6 +658,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BFA35C28222D78C700304475 /* Agenda.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BFA35C29222D78C700304475 /* Agenda.xcdatamodel */,
+			);
+			currentVersion = BFA35C29222D78C700304475 /* Agenda.xcdatamodel */;
+			path = Agenda.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BFAFA56D222AE80D00BBDDBA /* Project object */;
 }

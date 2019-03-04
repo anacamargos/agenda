@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
 class AlunoViewController: UIViewController, ImagePickerFotoSelecionada {
     
+
     // MARK: - Outlets
 
     @IBOutlet weak var scrollViewPrincipal: UIScrollView!
@@ -26,6 +28,10 @@ class AlunoViewController: UIViewController, ImagePickerFotoSelecionada {
     // MARK: - Atributos
     
     let imagePicker = ImagePicker()
+    var contexto: NSManagedObjectContext {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        return appDelegate.persistentContainer.viewContext
+    }
     
     // MARK: - View Lifecycle
     
@@ -91,4 +97,25 @@ class AlunoViewController: UIViewController, ImagePickerFotoSelecionada {
     @IBAction func stepperNota(_ sender: UIStepper) {
         self.textFieldNota.text = "\(sender.value)"
     }
+    
+    @IBAction func buttonSalvar(_ sender: UIButton) {
+        let aluno = Aluno(context: contexto)
+        
+        aluno.nome = textFieldNome.text
+        aluno.endereco = textFieldEndereco.text
+        aluno.telefone = textFieldTelefone.text
+        aluno.site = textFieldSite.text
+        aluno.nota = (textFieldNota.text! as NSString).doubleValue
+        aluno.foto = imagemAluno.image
+        
+        do {
+            try contexto.save()
+            navigationController?.popViewController(animated: true)
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+
+    }
+    
 }
