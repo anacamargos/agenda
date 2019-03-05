@@ -13,6 +13,8 @@
 		BFA35C2E222D936500304475 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C2D222D936500304475 /* Mensagem.swift */; };
 		BFA35C30222DF39E00304475 /* Localizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C2F222DF39E00304475 /* Localizacao.swift */; };
 		BFA35C34222EC83A00304475 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C33222EC83A00304475 /* MapaViewController.swift */; };
+		BFA35C37222ED4A900304475 /* CalculaMediaAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C36222ED4A900304475 /* CalculaMediaAPI.swift */; };
+		BFA35C39222EDB1500304475 /* Notificacoes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C38222EDB1500304475 /* Notificacoes.swift */; };
 		BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */; };
 		BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA57A222AE80D00BBDDBA /* ViewController.swift */; };
 		BFAFA57E222AE80D00BBDDBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAFA57C222AE80D00BBDDBA /* Main.storyboard */; };
@@ -49,6 +51,8 @@
 		BFA35C2D222D936500304475 /* Mensagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 		BFA35C2F222DF39E00304475 /* Localizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizacao.swift; sourceTree = "<group>"; };
 		BFA35C33222EC83A00304475 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
+		BFA35C36222ED4A900304475 /* CalculaMediaAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculaMediaAPI.swift; sourceTree = "<group>"; };
+		BFA35C38222EDB1500304475 /* Notificacoes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notificacoes.swift; sourceTree = "<group>"; };
 		BFAFA575222AE80D00BBDDBA /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAFA57A222AE80D00BBDDBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 				BFA35C2B222D8FD900304475 /* MenuOpcoesAlunos.swift */,
 				BFA35C2D222D936500304475 /* Mensagem.swift */,
 				BFA35C2F222DF39E00304475 /* Localizacao.swift */,
+				BFA35C38222EDB1500304475 /* Notificacoes.swift */,
 			);
 			path = Componentes;
 			sourceTree = "<group>";
@@ -117,6 +122,14 @@
 				BFA35C33222EC83A00304475 /* MapaViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		BFA35C35222ED48D00304475 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				BFA35C36222ED4A900304475 /* CalculaMediaAPI.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		BFAFA56C222AE80D00BBDDBA = {
@@ -178,6 +191,7 @@
 		BFAFA5A6222B104A00BBDDBA /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				BFA35C35222ED48D00304475 /* Model */,
 				BFAFA5A9222B106A00BBDDBA /* Controller */,
 				BFAFA5A8222B106400BBDDBA /* View */,
 			);
@@ -358,6 +372,8 @@
 				BFAFA5AD222B109C00BBDDBA /* HomeTableViewCell.swift in Sources */,
 				BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */,
 				BFA35C2E222D936500304475 /* Mensagem.swift in Sources */,
+				BFA35C39222EDB1500304475 /* Notificacoes.swift in Sources */,
+				BFA35C37222ED4A900304475 /* CalculaMediaAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

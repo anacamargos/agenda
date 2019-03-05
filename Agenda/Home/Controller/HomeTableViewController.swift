@@ -65,7 +65,7 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFe
     @objc func abrirActionSheet(_ longPress: UILongPressGestureRecognizer) {
         if longPress.state == .began {
             guard let alunoSelecionado = gerenciadorDeResultados?.fetchedObjects?[(longPress.view?.tag)!] else { return }
-            
+            //erro: print(alunoSelecionado.nome)
             let menu = MenuOpcoesAlunos().configuraMenuDeOpcoesDoAluno { (opcao) in
                 switch opcao {
                 case .sms:
@@ -117,10 +117,14 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFe
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula-aluno", for: indexPath) as! HomeTableViewCell
+        
         guard let aluno = gerenciadorDeResultados?.fetchedObjects![indexPath.row] else { return cell }
+
         let longPress = UILongPressGestureRecognizer(target: self, action: #selector(abrirActionSheet(_:)))
-        cell.configuraCelula(aluno)
         cell.addGestureRecognizer(longPress)
+
+        cell.configuraCelula(aluno)
+
         return cell
     }
     
@@ -148,6 +152,7 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFe
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let alunoSelecionado = gerenciadorDeResultados?.fetchedObjects![indexPath.row] else { return }
+        print(alunoSelecionado.nome)
         alunoViewController?.aluno = alunoSelecionado
         
     }
@@ -157,11 +162,22 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFe
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
         switch type {
         case .delete:
-            // implementar
             guard let indexPath = indexPath else { return }
              tableView.deleteRows(at: [indexPath], with: .fade)
         default:
             tableView.reloadData()
+        }
+    }
+    
+    
+    @IBAction func buttonCalculaMedia(_ sender: UIBarButtonItem) {
+        guard let listaDeAlunos = gerenciadorDeResultados?.fetchedObjects else { return }
+        CalculaMediaAPI().calculaMediaGeralDosAlunos(alunos: listaDeAlunos, sucesso: { (dicionario) in
+            if let alerta = Notificacoes().exibeNotificacao(dicionarioDeMedia: dicionario) {
+                self.present(alerta, animated: true, completion: nil)
+            }
+        }) { (error) in
+            print(error.localizedDescription)
         }
     }
     

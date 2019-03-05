@@ -34,8 +34,8 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j7J-Xx-opa">
-                                            <rect key="frame" x="116" y="32" width="235" height="20.5"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <rect key="frame" x="116" y="30.5" width="235" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -61,7 +61,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Agenda" id="TcF-Nf-9Tc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="rVK-kB-TAh"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="bookmarks" id="rVK-kB-TAh">
+                            <connections>
+                                <action selector="buttonCalculaMedia:" destination="58M-l0-IWB" id="26Z-kM-QKP"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="7rn-cz-0an">
                             <connections>
                                 <segue destination="QU1-a9-hbx" kind="show" id="da1-gQ-w67"/>
