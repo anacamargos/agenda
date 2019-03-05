@@ -12,6 +12,7 @@
 		BFA35C2C222D8FD900304475 /* MenuOpcoesAlunos.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C2B222D8FD900304475 /* MenuOpcoesAlunos.swift */; };
 		BFA35C2E222D936500304475 /* Mensagem.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C2D222D936500304475 /* Mensagem.swift */; };
 		BFA35C30222DF39E00304475 /* Localizacao.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C2F222DF39E00304475 /* Localizacao.swift */; };
+		BFA35C34222EC83A00304475 /* MapaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA35C33222EC83A00304475 /* MapaViewController.swift */; };
 		BFAFA579222AE80D00BBDDBA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */; };
 		BFAFA57B222AE80D00BBDDBA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFAFA57A222AE80D00BBDDBA /* ViewController.swift */; };
 		BFAFA57E222AE80D00BBDDBA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFAFA57C222AE80D00BBDDBA /* Main.storyboard */; };
@@ -47,6 +48,7 @@
 		BFA35C2B222D8FD900304475 /* MenuOpcoesAlunos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuOpcoesAlunos.swift; sourceTree = "<group>"; };
 		BFA35C2D222D936500304475 /* Mensagem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensagem.swift; sourceTree = "<group>"; };
 		BFA35C2F222DF39E00304475 /* Localizacao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizacao.swift; sourceTree = "<group>"; };
+		BFA35C33222EC83A00304475 /* MapaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapaViewController.swift; sourceTree = "<group>"; };
 		BFAFA575222AE80D00BBDDBA /* Agenda.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Agenda.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFAFA57A222AE80D00BBDDBA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,22 @@
 			path = Componentes;
 			sourceTree = "<group>";
 		};
+		BFA35C31222EC7FC00304475 /* Mapa */ = {
+			isa = PBXGroup;
+			children = (
+				BFA35C32222EC82400304475 /* Controller */,
+			);
+			path = Mapa;
+			sourceTree = "<group>";
+		};
+		BFA35C32222EC82400304475 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				BFA35C33222EC83A00304475 /* MapaViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		BFAFA56C222AE80D00BBDDBA = {
 			isa = PBXGroup;
 			children = (
@@ -124,9 +142,10 @@
 		BFAFA577222AE80D00BBDDBA /* Agenda */ = {
 			isa = PBXGroup;
 			children = (
-				BFA35C04222D6B9900304475 /* Componentes */,
 				BFAFA5A6222B104A00BBDDBA /* Home */,
 				BFAFA5A7222B105300BBDDBA /* Alunos */,
+				BFA35C31222EC7FC00304475 /* Mapa */,
+				BFA35C04222D6B9900304475 /* Componentes */,
 				BFAFA578222AE80D00BBDDBA /* AppDelegate.swift */,
 				BFA35C28222D78C700304475 /* Agenda.xcdatamodeld */,
 				BFAFA57A222AE80D00BBDDBA /* ViewController.swift */,
@@ -328,6 +347,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA35C34222EC83A00304475 /* MapaViewController.swift in Sources */,
 				BFAFA5B1222B12EB00BBDDBA /* AlunoViewController.swift in Sources */,
 				BFA35C2C222D8FD900304475 /* MenuOpcoesAlunos.swift in Sources */,
 				BFAFA5AB222B108B00BBDDBA /* HomeTableViewController.swift in Sources */,
