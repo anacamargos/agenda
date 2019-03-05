@@ -65,6 +65,7 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFe
     @objc func abrirActionSheet(_ longPress: UILongPressGestureRecognizer) {
         if longPress.state == .began {
             guard let alunoSelecionado = gerenciadorDeResultados?.fetchedObjects?[(longPress.view?.tag)!] else { return }
+            
             let menu = MenuOpcoesAlunos().configuraMenuDeOpcoesDoAluno { (opcao) in
                 switch opcao {
                 case .sms:
@@ -72,6 +73,28 @@ class HomeTableViewController: UITableViewController , UISearchBarDelegate, NSFe
                         componenteMensagem.messageComposeDelegate = self.mensagem
                         self.present(componenteMensagem, animated: true, completion: nil)
                     }
+                    break
+                case .ligacao:
+                    guard let numeroDoAluno = alunoSelecionado.telefone else { return }
+                    if let url = URL(string: "tel://\(numeroDoAluno)"), UIApplication.shared.canOpenURL(url) {
+                        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    }
+                    break
+                case .waze:
+                    if UIApplication.shared.canOpenURL(URL(string: "waze://")!) {
+                        guard let enderecoDoAluno = alunoSelecionado.endereco else { return }
+                        Localizacao().converteEnderecoEmCoordenadas(endereco: enderecoDoAluno, local: { (localizacaoEncontrada) in
+                            print("Oi cheguei aqui")
+                            let latitude = String(describing: localizacaoEncontrada.location!.coordinate.latitude)
+                            let longitude = String(describing: localizacaoEncontrada.location!.coordinate.longitude)
+                            let url: String = "waze://?ll=\(latitude),\(longitude)&navigate=yes"
+                            UIApplication.shared.open(URL(string: url)!, options: [:], completionHandler: nil)
+                            
+                        })
+                    }
+                    
+                    break
+                    
                 }
             }
             self.present(menu, animated: true, completion: nil)
